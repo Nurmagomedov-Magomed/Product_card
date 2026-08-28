@@ -1,0 +1,12 @@
+*,
+*::before,
+*::after {
+  color: #515076;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 1280px;
+}

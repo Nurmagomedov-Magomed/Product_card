@@ -1,0 +1,34 @@
+.card {
+  background-color: #5150761A;
+  padding: 25px;
+  width: 340px;
+  border: 1px solid #515076;
+  font-size: 13px;
+  line-height: 18px;
+  top: 408px;
+}
+
+.card__product-header {
+  margin-bottom: 15px;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.card__price {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card__name {
+  font-size: 20px;
+  line-height: 27px;
+}
+
+.card__category {
+  color: #A5A3B9;
+  display: block;
+  line-height: 24px;
+}
