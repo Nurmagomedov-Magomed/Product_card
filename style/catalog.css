@@ -12,3 +12,12 @@
   margin-left: 85px;
   z-index: -1;
 }
+
+.catalog__button {
+  margin-bottom: 20px;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 55px;
+  height: 35px;
+}
