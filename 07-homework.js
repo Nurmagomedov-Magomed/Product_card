@@ -1,70 +1,75 @@
-const city = 'Домодедово'
-const temperature = 17
-console.log(`Сейчас в городе ${city} ${temperature}℃`)
+function getTemperature(city, temperature) {
+  console.log(`Сейчас в городе ${city} ${temperature}℃`)
+  return temperature
+}
+getTemperature('Домодедово', 13)
 
 
 const LIGHT_SPEED = 299792458;
 
 function checkSpeed(speed) {
-  if (speed < 299791433) {
-    console.log('Сверхсветовая скорость')
-  } else if (speed > 299795670) {
-    console.log('Субсветовая скорость')
+  if (speed > 299791433) {
+    return ('Сверхсветовая скорость')
+  } else if (speed < 299795670) {
+    return ('Субсветовая скорость')
   } else {
-    console.log('Скорость света')
+    return ('Скорость света')
   }
 }
-checkSpeed(299792458)
+console.log(checkSpeed(2997924))
 
 
-let product;
-let price;
-
-function checkPrice(product, price) {
-  if (price >= 17700) {
-    console.log(`${product} приобретён. Спасибо за покупку!`)
+function checkBudget(product, price, budget) {
+  if (budget >= price) {
+    return `${product} приобретён. Спасибо за покупку!`
+  } else {
+    price - budget
+    return `Недостаточно средств для покупки ${product}. Не хватает ${price - budget} рублей.`
   }
 }
-checkPrice('Велосипед', 177345)
+console.log(checkBudget('froggy', 100, 50))
 
-
-const age = 25;
 
 function checkAge(age) {
-
   if (age <= 30) {
-    console.log('Мы берем вас на работу!')
+    return ('Мы берем вас на работу!')
   } else {
-    console.log('Вы нам не нужны')
+    return ('Вы нам не нужны')
   }
 }
-checkAge(25)
+console.log(checkAge(40))
 
-
-const CHROMOSOMESN = 46;
 
 function checkChromosomes(chromosomes) {
   if (chromosomes < 46) {
-    console.log('Вы уникальный человек!')
+    return ('Вы уникальный человек!')
   } else if (chromosomes > 46) {
-    console.log('Вы необычный человек!')
+    return ('Вы необычный человек!')
   } else {
-    console.log('Вы обычный человек!')
+    return ('Вы обычный человек!')
   }
 }
-checkChromosomes(47)
+console.log(checkChromosomes(47))
 
 
 let student = 'Амир';
-let haveExperience = false;
+let haveExperience = true;
 
-function toExperience(student) {
-  if (student) {
-    if (haveExperience) {
-      console.log('Вы опытный студент, мы искали вас!')
-    } else {
-      console.log('Вы не опытный студент, мы ищем опытного студента!')
-    }
+function toExperience() {
+  if (haveExperience) {
+    return ('Вы опытный студент, мы искали вас!')
+  } else {
+    return ('Вы не опытный студент, мы ищем опытного студента!')
   }
 }
-toExperience(student)
+console.log(toExperience())
+
+
+function strongTest(name, strong) {
+  if (strong) {
+    return (`Поможешь мне таскать мешки, ${name}`)
+  } else {
+    return (`Иди домой, ${name}`)
+  }
+}
+console.log(strongTest('Вахид', true))
