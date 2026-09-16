@@ -23,7 +23,6 @@ function checkBudget(product, price, budget) {
   if (budget >= price) {
     return `${product} приобретён. Спасибо за покупку!`
   } else {
-    price - budget
     return `Недостаточно средств для покупки ${product}. Не хватает ${price - budget} рублей.`
   }
 }
