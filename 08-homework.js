@@ -22,14 +22,16 @@ console.log(car);
 
 
 car.owner = resume;
-car.maxSpeed = 220;
 
 
 function checkSpeed(carObject) {
   if ('maxSpeed' in carObject) {
     return;
+  } else {
+    carObject.maxSpeed = 220;
   }
 };
+checkSpeed(car);
 
 
 function getKeyObject(object, key) {
