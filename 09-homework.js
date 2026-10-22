@@ -1,21 +1,29 @@
-const nambers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-console.log(nambers);
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+console.log(numbers);
 
 
-const newArrayNambers = nambers.slice(4, 10);
-console.log(newArrayNambers);
+const newArrayNumbers = numbers.slice(4, 10);
+console.log(newArrayNumbers);
 
 
 const trees = ['Дуб', 'Береза', 'Сосна', 'Клен', 'Липа', 'Тополь', 'Ясень', 'Ива', 'Осина',];
-console.log(trees.includes('Липа'));
-console.log(trees);
-console.log(Array.isArray('[Тополь]'));
+function searchTree(array, name) {
+  if (!Array.isArray(array)) {
+    return 'Неверный формат массива.'
+  }
+  if (typeof name !== 'string') {
+    return 'Неверный формат названия дерева.'
+  }
+  return array.includes(name);
+}
+console.log(searchTree(trees, 'Липа'));
 
 
-nambers.reverse();
-trees.reverse();
-console.log(nambers);
-console.log(trees);
+function reverseArray(array) {
+  return array.reverse();
+}
+console.log(reverseArray(numbers));
+console.log(reverseArray(trees));
 
 
 import { comments } from "./comments.js";
